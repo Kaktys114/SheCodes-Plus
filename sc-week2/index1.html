@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Your lovely weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="search">
+        <input type="text" placeholder="Which city do you search?" />
+        <input type="submit" class="btn" value="🔎" />
+      </form>
+      <h1>The weather in <span class="city">Kyiv</span></h1>
+      <div class="today-weather-wrapper">
+        <div class="current-data">
+          <p class="city">Kyiv</p>
+          <p class="data">Tuesday, 23 august</p>
+          <p class="time">00:01</p>
+          <p class="temperature">22℃</p>
+          <img src="/" alt="" />
+        </div>
+        <div class="today">
+          <div class="row">
+            <div class="col-2">
+              <div class="card">
+                <div class="card-body">
+                  <p class="time">04:00</p>
+                  <i class="fa-solid fa-moon"></i>
+                  <p class="temperature">20℃</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card">
+                <div class="card-body">
+                  <p class="time">08:00</p>
+                  <i class="fa-solid fa-sun"></i>
+                  <p class="temperature">21℃</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card">
+                <div class="card-body">
+                  <p class="time">12:00</p>
+                  <i class="fa-solid fa-cloud-sun"></i>
+                  <p class="temperature">24℃</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card">
+                <div class="card-body">
+                  <p class="time">16:00</p>
+                  <i class="fa-solid fa-cloud-sun"></i>
+                  <p class="temperature">30℃</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card">
+                <div class="card-body">
+                  <p class="time">20:00</p>
+                  <i class="fa-solid fa-sun"></i>
+                  <p class="temperature">26℃</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card">
+                <div class="card-body">
+                  <p class="time">00:00</p>
+                  <i class="fa-solid fa-moon"></i>
+                  <p class="temperature">23℃</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="next-days">
+        <div class="day-firstrow">
+          <div class="day">
+            <p class="day-name">Wednesday</p>
+            <p class="day-date">24 august</p>
+            <div class="day-weather">
+              <div class="row">
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">08:00</p>
+                      <i class="fa-solid fa-sun"></i>
+                      <p class="temperature">21℃</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">15:00</p>
+                      <i class="fa-solid fa-sun"></i>
+                      <p class="temperature">32℃</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">22:00</p>
+                      <i class="fa-solid fa-moon"></i>
+                      <p class="temperature">26℃</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="day">
+            <p class="day-name">Thursday</p>
+            <p class="day-date">25 august</p>
+            <div class="day-weather">
+              <div class="row">
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">08:00</p>
+                      <i class="fa-solid fa-sun"></i>
+                      <p class="temperature">22℃</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">15:00</p>
+                      <i class="fa-solid fa-sun"></i>
+                      <p class="temperature">31℃</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">22:00</p>
+                      <i class="fa-solid fa-moon"></i>
+                      <p class="temperature">27℃</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="day">
+            <p class="day-name">Friday</p>
+            <p class="day-date">26 august</p>
+            <div class="day-weather">
+              <div class="row">
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">08:00</p>
+                      <i class="fa-solid fa-sun"></i>
+                      <p class="temperature">23℃</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">15:00</p>
+                      <i class="fa-solid fa-sun"></i>
+                      <p class="temperature">31℃</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">22:00</p>
+                      <i class="fa-solid fa-moon"></i>
+                      <p class="temperature">26℃</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="day-secondrow">
+          <div class="day">
+            <p class="day-name">Saturday</p>
+            <p class="day-date">27 august</p>
+            <div class="day-weather">
+              <div class="row">
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">08:00</p>
+                      <i class="fa-solid fa-cloud-sun"></i>
+                      <p class="temperature">21℃</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">15:00</p>
+                      <i class="fa-solid fa-cloud-sun"></i>
+                      <p class="temperature">30℃</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">22:00</p>
+                      <i class="fa-solid fa-moon"></i>
+                      <p class="temperature">25℃</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="day">
+            <p class="day-name">Sunday</p>
+            <p class="day-date">28 august</p>
+            <div class="day-weather">
+              <div class="row">
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">08:00</p>
+                      <i class="fa-solid fa-cloud-sun"></i>
+                      <p class="temperature">21℃</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">15:00</p>
+                      <i class="fa-solid fa-cloud-sun"></i>
+                      <p class="temperature">31℃</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="time">22:00</p>
+                      <i class="fa-solid fa-moon"></i>
+                      <p class="temperature">26℃</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/4de8590133.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

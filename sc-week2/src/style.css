@@ -1,0 +1,42 @@
+body {
+  font-family: "Comfortaa", cursive;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+}
+.container {
+  margin: 20px 60px;
+}
+/* .text {
+  border: 2px solid blue;
+} */
+h1 {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.current-data p {
+  margin: 0;
+}
+.current-data .temperature {
+  font-size: 40px;
+}
+.col-2,
+.col-4 {
+  padding: 0;
+  text-align: center;
+}
+.card {
+  margin-bottom: 50px;
+}
+.row {
+  margin: 0 auto;
+  max-width: 800px;
+}
+.day {
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+}
+.day-firstrow,
+.day-secondrow {
+  display: flex;
+}
