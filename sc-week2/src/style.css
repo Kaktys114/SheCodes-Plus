@@ -35,6 +35,7 @@ p {
 }
 .row {
   max-width: 800px;
+  margin: 0 auto;
 }
 .day {
   font-size: smaller;
@@ -74,4 +75,7 @@ h1 {
 .now-icon {
   font-size: 100px;
   color: aliceblue;
+}
+.units {
+  font-size: 20px;
 }
