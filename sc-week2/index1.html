@@ -16,22 +16,33 @@
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Your lovely weather</title>
   </head>
   <body>
     <div class="container">
-      <form class="search">
-        <input type="text" placeholder="Which city do you search?" />
+      <form class="search" id="search-form">
+        <input
+          type="text"
+          placeholder="Which city do you search?"
+          id="userCity-input"
+        />
         <input type="submit" class="btn" value="🔎" />
+        <button class="current-btn">📌Current</button>
       </form>
       <div class="now-weather-wrapper">
         <div class="current-data">
-          <h1>The weather in <span class="city">Kyiv</span></h1>
-          <p class="city">Kyiv</p>
-          <p class="data">Tuesday, 23 august</p>
-          <p class="time">00:01</p>
-          <p class="temperature">22℃</p>
+          <h1>The weather in <span class="city" id="city">Kyiv</span></h1>
+          <p class="date" id="todayDate">Tuesday, 23 august</p>
+          <p class="time" id="timeNow">00:01</p>
+          <!-- <span class="units">
+            <a href="#" id="celcius-link">℃</a>
+            |
+            <a href="#" id="fahrenheit-link">℉</a>
+          </span> -->
+          <p class="temperature" id="temperatureNow">22℃</p>
         </div>
         <div class="now-icon"><i class="fa-solid fa-cloud-moon"></i></div>
       </div>
@@ -275,6 +286,7 @@
         </div>
       </div>
     </div>
+    <script src="src/index.js"></script>
     <script
       src="https://kit.fontawesome.com/4de8590133.js"
       crossorigin="anonymous"

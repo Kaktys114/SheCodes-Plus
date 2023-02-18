@@ -8,6 +8,19 @@ body {
 p {
   margin-bottom: 5px;
 }
+.current-btn {
+  text-align: center;
+  box-sizing: border-box;
+  border: 4px solid rgba(124, 180, 226, 0.507);
+  border-radius: 100px;
+  width: 100px;
+  background-color: aliceblue;
+  padding: 0;
+  font-size: 12px;
+  background-color: rgb(0, 207, 138);
+  font-weight: bold;
+  color: black;
+}
 .container {
   margin: 0 auto;
   padding: 50px;
@@ -35,6 +48,7 @@ p {
 }
 .row {
   max-width: 800px;
+  margin: 0 auto;
 }
 .day {
   font-size: smaller;
@@ -52,7 +66,7 @@ p {
   display: flex;
 }
 input[type="text"],
-.btn {
+.btn[type="submit"] {
   text-align: center;
   box-sizing: border-box;
   border: 4px solid rgba(124, 180, 226, 0.507);
@@ -74,4 +88,7 @@ h1 {
 .now-icon {
   font-size: 100px;
   color: aliceblue;
+}
+.units {
+  font-size: 20px;
 }
