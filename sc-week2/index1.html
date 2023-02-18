@@ -17,12 +17,19 @@
       rel="stylesheet"
     />
 
+
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Your lovely weather</title>
   </head>
   <body>
     <div class="container">
+      <form class="search" id="search-form">
+        <input
+          type="text"
+          placeholder="Which city do you search?"
+          id="userCity-input"
+        />
       <form class="search" id="search-form">
         <input
           type="text"
@@ -286,6 +293,7 @@
         </div>
       </div>
     </div>
+    <script src="src/index.js"></script>
     <script src="src/index.js"></script>
     <script
       src="https://kit.fontawesome.com/4de8590133.js"
