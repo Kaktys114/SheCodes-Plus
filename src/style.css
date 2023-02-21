@@ -84,6 +84,7 @@ h1 {
 }
 .current-data .temperature {
   font-size: 30px;
+  display: inline;
 }
 .now-icon {
   font-size: 100px;

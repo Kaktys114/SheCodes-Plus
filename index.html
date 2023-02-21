@@ -17,19 +17,12 @@
       rel="stylesheet"
     />
 
-
     <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Your lovely weather</title>
   </head>
   <body>
     <div class="container">
-      <form class="search" id="search-form">
-        <input
-          type="text"
-          placeholder="Which city do you search?"
-          id="userCity-input"
-        />
       <form class="search" id="search-form">
         <input
           type="text"
@@ -49,7 +42,8 @@
             |
             <a href="#" id="fahrenheit-link">℉</a>
           </span> -->
-          <p class="temperature" id="temperatureNow">22℃</p>
+          <p class="temperature" id="temperatureNow">22</p>
+          <span class="units">℃</span>
         </div>
         <div class="now-icon"><i class="fa-solid fa-cloud-moon"></i></div>
       </div>
