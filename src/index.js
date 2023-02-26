@@ -1,35 +1,30 @@
-let apiKey = `d234bca024b8fc4b39cfea2a5b06888d`;
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-let currentData = new Date();
-
 // current date⬇️
 
 function getFormattedDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
   let weekDay = days[date.getDay()];
   let todayDate = date.getDate();
   let month = months[date.getMonth()];
@@ -37,7 +32,7 @@ function getFormattedDate(date) {
   return `${weekDay}, ${todayDate} ${month}`;
 }
 
-document.querySelector("#todayDate").innerHTML = getFormattedDate(currentData);
+document.querySelector("#todayDate").innerHTML = getFormattedDate(new Date());
 
 // current date⬆️
 
@@ -58,20 +53,36 @@ function getFormattedTime(time) {
 
   return `${hours}:${minutes}`;
 }
-document.querySelector("#timeNow").innerHTML = getFormattedTime(currentData);
+document.querySelector("#timeNow").innerHTML = getFormattedTime(new Date());
 
 // current time⬆️
 
 // Searching for a new city⬇️
 function updateAfterSearching(response) {
+  celciusTemperature = Math.round(response.data.temperature.current);
+  document
+    .querySelector(`#currentIcon`)
+    .setAttribute(`src`, `${response.data.condition.icon_url}`);
+  document
+    .querySelector(`#currentIcon`)
+    .setAttribute(`alt`, `${response.data.condition.icon}`);
+  document.querySelector("#weatherDescription").innerHTML =
+    response.data.condition.description;
   document.querySelector(`#temperatureNow`).innerHTML = Math.round(
-    response.data.main.temp
+    response.data.temperature.current
   );
-  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#city").innerHTML = response.data.city;
+  document.querySelector("#humidity").innerHTML =
+    response.data.temperature.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
 }
 
 function updateWeather(userCity) {
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${userCity}&appid=${apiKey}&units=metric`;
+  let unit = `metric`;
+  let apiKey = "858to1de0c4c3648a5d4b7de0304febb";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${userCity}&key=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(updateAfterSearching);
 }
 
@@ -87,7 +98,8 @@ document.querySelector("#search-form").addEventListener("submit", searchCity);
 // click on the "current"-button⬇️
 function getCurrentLocation(position) {
   let unit = `metric`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${unit}`;
+  let apiKey = `858to1de0c4c3648a5d4b7de0304febb`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(updateAfterSearching);
 }
 

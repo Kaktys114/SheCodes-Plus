@@ -31,6 +31,7 @@ p {
   max-width: 65%;
 }
 .now-weather-wrapper {
+  text-transform: capitalize;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -79,17 +80,19 @@ input[type="text"],
   max-width: 50px;
 }
 h1 {
+  padding-top: 30px;
   font-weight: bold;
   color: rgb(0, 0, 0);
 }
 .current-data .temperature {
-  font-size: 30px;
+  font-size: 40px;
   display: inline;
 }
-.now-icon {
-  font-size: 100px;
-  color: aliceblue;
+.currentIcon {
+  width: 200px;
 }
 .units {
+  position: relative;
   font-size: 20px;
+  top: -20px;
 }

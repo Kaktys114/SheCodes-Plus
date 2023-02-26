@@ -30,22 +30,25 @@
           id="userCity-input"
         />
         <input type="submit" class="btn" value="🔎" />
-        <button class="current-btn">📌Current</button>
+        <button class="current-btn" id="current-btn">📌Current</button>
       </form>
+      <h1>The weather in <span class="city" id="city"></span></h1>
       <div class="now-weather-wrapper">
-        <div class="current-data">
-          <h1>The weather in <span class="city" id="city">Kyiv</span></h1>
-          <p class="date" id="todayDate">Tuesday, 23 august</p>
-          <p class="time" id="timeNow">00:01</p>
-          <!-- <span class="units">
-            <a href="#" id="celcius-link">℃</a>
-            |
-            <a href="#" id="fahrenheit-link">℉</a>
-          </span> -->
-          <p class="temperature" id="temperatureNow">22</p>
-          <span class="units">℃</span>
+        <img src="" alt="" class="currentIcon" id="currentIcon" />
+        <div class="current-data col-4">
+          <p class="date" id="todayDate"></p>
+          <p id="weatherDescription"></p>
+          <p class="time" id="timeNow"></p>
+          <p class="temperature" id="temperatureNow">2</p>
+          <span class="units">
+            <a href="#" class="celcius-link" id="celcius-link">℃</a> |
+            <a href="#" class="fahrenheit-link" id="fahrenheit-link">℉</a>
+          </span>
         </div>
-        <div class="now-icon"><i class="fa-solid fa-cloud-moon"></i></div>
+        <div class="col-4">
+          <p>Humidity: <span id="humidity"></span>%</p>
+          <p>Wind: <span id="wind"></span> km/h</p>
+        </div>
       </div>
       <div class="today">
         <div class="row">
@@ -105,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="next-days">
+      <!-- <div class="next-days">
         <div class="day-firstrow">
           <div class="day">
             <p class="day-name">Wednesday</p>
@@ -285,7 +288,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <p>
       <a
