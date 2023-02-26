@@ -77,6 +77,8 @@ function updateAfterSearching(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document.querySelector(`#fahrenheit-link`).classList.remove(`active`);
+  document.querySelector(`#celcius-link`).classList.add(`active`);
 }
 
 function updateWeather(userCity) {
@@ -113,5 +115,32 @@ document
   .addEventListener("click", getGeoposition);
 
 // click on the "current"-button⬇⬆️
+
+// unit conversion⬇️
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  document.querySelector(`#temperatureNow`).innerHTML = Math.round(
+    (celciusTemperature * 9) / 5 + 32
+  );
+  document.querySelector(`#celcius-link`).classList.remove(`active`);
+  document.querySelector(`#fahrenheit-link`).classList.add(`active`);
+}
+let celciusTemperature = null;
+
+function convertToCelcius(event) {
+  event.preventDefault();
+  document.querySelector(`#temperatureNow`).innerHTML = celciusTemperature;
+  document.querySelector(`#fahrenheit-link`).classList.remove(`active`);
+  document.querySelector(`#celcius-link`).classList.add(`active`);
+}
+
+document
+  .querySelector(`#fahrenheit-link`)
+  .addEventListener(`click`, convertToFahrenheit);
+
+document
+  .querySelector(`#celcius-link`)
+  .addEventListener(`click`, convertToCelcius);
+// unit conversion⬆️
 
 updateWeather("Berlin");

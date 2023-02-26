@@ -8,6 +8,9 @@ body {
 p {
   margin-bottom: 5px;
 }
+a {
+  text-decoration: none;
+}
 .current-btn {
   text-align: center;
   box-sizing: border-box;
@@ -35,7 +38,7 @@ p {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 30px;
+  padding: 30px 200px;
   text-align: left;
 }
 .col-2,
@@ -89,10 +92,15 @@ h1 {
   display: inline;
 }
 .currentIcon {
-  width: 200px;
+  width: 150px;
 }
 .units {
   position: relative;
   font-size: 20px;
   top: -20px;
+}
+
+.units .active {
+  color: black;
+  cursor: default;
 }
