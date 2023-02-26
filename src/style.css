@@ -38,7 +38,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 30px 200px;
+  padding: 30px 50px 30px 220px;
   text-align: left;
 }
 .col-2,
