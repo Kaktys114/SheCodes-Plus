@@ -34,12 +34,12 @@
       </form>
       <h1>The weather in <span class="city" id="city"></span></h1>
       <div class="now-weather-wrapper">
-        <img src="" alt="" class="currentIcon" id="currentIcon" />
+        <img src="" alt="" class="current-icon col-4" id="current-icon" />
         <div class="current-data col-4">
-          <p class="date" id="todayDate"></p>
-          <p id="weatherDescription"></p>
-          <p class="time" id="timeNow"></p>
-          <p class="temperature" id="temperatureNow">2</p>
+          <p class="date" id="today-date"></p>
+          <p>Last updated: <span class="time" id="time-now"></span></p>
+          <p id="weather-description"></p>
+          <p class="temperature" id="temperature-now">2</p>
           <span class="units">
             <a href="#" class="active" id="celcius-link">℃</a> |
             <a href="#" id="fahrenheit-link">℉</a>
@@ -50,70 +50,13 @@
           <p>Wind: <span id="wind"></span> km/h</p>
         </div>
       </div>
-      <div class="today">
-        <div class="row">
-          <div class="col-2">
-            <div class="card">
-              <div class="card-body">
-                <p class="time">04:00</p>
-                <i class="fa-solid fa-moon"></i>
-                <p class="temperature">20℃</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <div class="card-body">
-                <p class="time">08:00</p>
-                <i class="fa-solid fa-sun"></i>
-                <p class="temperature">21℃</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <div class="card-body">
-                <p class="time">12:00</p>
-                <i class="fa-solid fa-cloud-sun"></i>
-                <p class="temperature">24℃</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <div class="card-body">
-                <p class="time">16:00</p>
-                <i class="fa-solid fa-cloud-sun"></i>
-                <p class="temperature">30℃</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <div class="card-body">
-                <p class="time">20:00</p>
-                <i class="fa-solid fa-sun"></i>
-                <p class="temperature">26℃</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <div class="card-body">
-                <p class="time">00:00</p>
-                <i class="fa-solid fa-moon"></i>
-                <p class="temperature">23℃</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="next-days">
-        <div class="day-firstrow">
+      <div class="today" id="today-forecast"></div>
+      <div class="next-days" id="week-forecast">
+        <div class="day-firstrow" id="firstRowWeekForecast">
           <div class="day">
             <p class="day-name">Wednesday</p>
             <p class="day-date">24 august</p>
-            <div class="day-weather">
+            <div class="day-weather" id="day-weather">
               <div class="row">
                 <div class="col-4">
                   <div class="card">
@@ -216,7 +159,7 @@
             </div>
           </div>
         </div>
-        <div class="day-secondrow">
+        <div class="day-secondrow" id="secondRowWeekForecast">
           <div class="day">
             <p class="day-name">Saturday</p>
             <p class="day-date">27 august</p>

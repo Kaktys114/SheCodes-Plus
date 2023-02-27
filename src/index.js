@@ -32,7 +32,7 @@ function getFormattedDate(date) {
   return `${weekDay}, ${todayDate} ${month}`;
 }
 
-document.querySelector("#todayDate").innerHTML = getFormattedDate(new Date());
+document.querySelector("#today-date").innerHTML = getFormattedDate(new Date());
 
 // current date⬆️
 
@@ -53,22 +53,57 @@ function getFormattedTime(time) {
 
   return `${hours}:${minutes}`;
 }
-document.querySelector("#timeNow").innerHTML = getFormattedTime(new Date());
+document.querySelector("#time-now").innerHTML = getFormattedTime(new Date());
 
 // current time⬆️
+
+// Forecast⬇️
+
+// today forecast⬇️
+
+function displayTodayForecast() {
+  let todayForecast = document.querySelector(`#today-forecast`);
+  let times = [`02:00`, `07:00`, `12:00`, `15:00`, `18:00`, `23:00`];
+  let todayForecastHTML = `<div class="row">`;
+  times.forEach(function (time) {
+    todayForecastHTML =
+      todayForecastHTML +
+      `
+          <div class="col-2">
+            <div class="card">
+              <div class="card-body">
+                <p class="time">${time}</p>
+                <i class="fa-solid fa-moon"></i>
+                <p class="temperature">20℃</p>
+              </div>
+            </div>
+          </div>
+          `;
+  });
+  todayForecastHTML = todayForecastHTML + `</div>`;
+  todayForecast.innerHTML = todayForecastHTML;
+}
+
+// today forecast⬆️
+
+// week forecast⬇️
+
+// week forecast⬆️
+
+// Forecast⬆️
 
 // Searching for a new city⬇️
 function updateAfterSearching(response) {
   celciusTemperature = Math.round(response.data.temperature.current);
   document
-    .querySelector(`#currentIcon`)
+    .querySelector(`#current-icon`)
     .setAttribute(`src`, `${response.data.condition.icon_url}`);
   document
-    .querySelector(`#currentIcon`)
+    .querySelector(`#current-icon`)
     .setAttribute(`alt`, `${response.data.condition.icon}`);
-  document.querySelector("#weatherDescription").innerHTML =
+  document.querySelector("#weather-description").innerHTML =
     response.data.condition.description;
-  document.querySelector(`#temperatureNow`).innerHTML = Math.round(
+  document.querySelector(`#temperature-now`).innerHTML = Math.round(
     response.data.temperature.current
   );
   document.querySelector("#city").innerHTML = response.data.city;
@@ -79,6 +114,9 @@ function updateAfterSearching(response) {
   );
   document.querySelector(`#fahrenheit-link`).classList.remove(`active`);
   document.querySelector(`#celcius-link`).classList.add(`active`);
+  displayTodayForecast();
+  displayFirstRowWeekForecast();
+  displaySecondRowWeekForecast();
 }
 
 function updateWeather(userCity) {
@@ -119,7 +157,7 @@ document
 // unit conversion⬇️
 function convertToFahrenheit(event) {
   event.preventDefault();
-  document.querySelector(`#temperatureNow`).innerHTML = Math.round(
+  document.querySelector(`#temperature-now`).innerHTML = Math.round(
     (celciusTemperature * 9) / 5 + 32
   );
   document.querySelector(`#celcius-link`).classList.remove(`active`);
@@ -129,7 +167,7 @@ let celciusTemperature = null;
 
 function convertToCelcius(event) {
   event.preventDefault();
-  document.querySelector(`#temperatureNow`).innerHTML = celciusTemperature;
+  document.querySelector(`#temperature-now`).innerHTML = celciusTemperature;
   document.querySelector(`#fahrenheit-link`).classList.remove(`active`);
   document.querySelector(`#celcius-link`).classList.add(`active`);
 }
