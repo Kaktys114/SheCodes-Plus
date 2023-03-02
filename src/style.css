@@ -33,6 +33,11 @@ a {
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
   max-width: 65%;
 }
+.units {
+  position: relative;
+  font-size: 20px;
+  top: -20px;
+}
 .now-weather-wrapper {
   text-transform: capitalize;
   display: flex;
@@ -46,28 +51,17 @@ a {
   padding: 0;
 }
 .card {
-  background-color: aliceblue;
+  background-color: rgba(113, 165, 210, 0.335);
   margin-bottom: 50px;
   border: 2px solid rgba(0, 107, 194, 0.7);
+  font-size: 14px;
+}
+.card-body {
+  padding: 5px;
 }
 .row {
   max-width: 800px;
   margin: 0 auto;
-}
-.day {
-  font-size: smaller;
-  min-width: 220px;
-  margin: 0 auto;
-}
-.day-name {
-  font-weight: bold;
-}
-.fa-solid {
-  padding-bottom: 10px;
-}
-.day-firstrow,
-.day-secondrow {
-  display: flex;
 }
 input[type="text"],
 .btn[type="submit"] {
@@ -94,13 +88,18 @@ h1 {
 .current-icon {
   width: 150px;
 }
-.units {
-  position: relative;
-  font-size: 20px;
-  top: -20px;
-}
-
-.units .active {
-  color: black;
-  cursor: default;
-}
+/* .day-forecast-icon {
+  width: 60px;
+} */
+/* .day {
+  font-size: smaller;
+  min-width: 220px;
+  margin: 0 auto;
+} */
+/* .day-name {
+  font-weight: bold;
+} */
+/* .day-firstrow,
+.day-secondrow {
+  display: flex;
+} */
